@@ -9,8 +9,13 @@ const taskRoutes = require("./routes/tasks");
 const userRoutes = require("./routes/users");
 
 const app = express();
-app.use(cors());
-
+app.use(cors({
+  origin: [
+    "https://team-task-manager-5th4zqy1r-rishabh-sharmas-projects-58610397.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
