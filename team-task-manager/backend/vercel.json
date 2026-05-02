@@ -1,0 +1,11 @@
+{
+  "builds": [
+    {
+      "src": "team-task-manager/frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ]
+}
