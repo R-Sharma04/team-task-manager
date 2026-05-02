@@ -12,9 +12,11 @@ const app = express();
 const cors = require("cors");
 
 app.use(cors({
-  origin: true, // allow ALL origins (best for assignment)
-  credentials: true
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
+app.options("*", cors());
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
