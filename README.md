@@ -6,7 +6,7 @@ A full-stack web application where users can create projects, assign tasks, and 
 
 ## 🔗 Live Demo
 
-* Frontend: https://team-task-manager.vercel.app
+* Frontend: team-task-manager-5th4zqy1r-rishabh-sharmas-projects-58610397.vercel.app
 * Backend API: https://team-task-manager-zsyi.onrender.com
 
 ---
