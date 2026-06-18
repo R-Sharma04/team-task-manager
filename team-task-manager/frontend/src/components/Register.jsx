@@ -9,7 +9,7 @@ function Register({ onRegister, onSwitchToLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${API_BASE}/auth/register`, form);
+      const res = await axios.post(`${API_BASE}/api/auth/register`, form);
       onRegister(res.data.token);
     } catch (error) {
       setError(error.response?.data?.message || 'Registration failed');

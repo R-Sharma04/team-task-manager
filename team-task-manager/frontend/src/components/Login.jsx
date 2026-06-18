@@ -9,8 +9,7 @@ function Login({ onLogin, onSwitchToRegister }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${API_BASE}/auth/login`, form);
-      onLogin(res.data.token);
+const res = await axios.post(`${API_BASE}/api/auth/login`, form);      onLogin(res.data.token);
     } catch (error) {
       setError(error.response?.data?.message || 'Login failed');
     }

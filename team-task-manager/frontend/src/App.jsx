@@ -21,8 +21,7 @@ function App() {
 
   const fetchProfile = async () => {
     try {
-      const res = await axios.get(`${API_BASE}/users/profile`);
-      setUser(res.data);
+const res = await axios.get(`${API_BASE}/api/users/profile`);      setUser(res.data);
     } catch (error) {
       console.error('Failed to fetch profile:', error);
       logout();

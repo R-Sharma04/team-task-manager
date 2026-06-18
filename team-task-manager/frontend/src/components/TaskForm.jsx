@@ -9,7 +9,7 @@ function TaskForm({ onTaskAdded }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${API_BASE}/tasks`, form);
+      await axios.post(`${API_BASE}/api/tasks`, form);
       setForm({ title: '', description: '', status: 'pending' });
       onTaskAdded();
     } catch (error) {

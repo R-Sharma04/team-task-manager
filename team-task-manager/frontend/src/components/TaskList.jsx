@@ -8,7 +8,7 @@ function TaskList() {
 
   const fetchTasks = async () => {
     try {
-      const res = await axios.get(`${API_BASE}/tasks`);
+      const res = await axios.get(`${API_BASE}/api/tasks`);
       setTasks(res.data);
     } catch (error) {
       setError('Failed to fetch tasks');
@@ -21,7 +21,7 @@ function TaskList() {
 
   const updateTask = async (id, updates) => {
     try {
-      await axios.put(`${API_BASE}/tasks/${id}`, updates);
+      await axios.put(`${API_BASE}/api/tasks/${id}`, updates);
       fetchTasks();
     } catch (error) {
       setError('Failed to update task');
@@ -30,7 +30,7 @@ function TaskList() {
 
   const deleteTask = async (id) => {
     try {
-      await axios.delete(`${API_BASE}/tasks/${id}`);
+      await axios.delete(`${API_BASE}/api/tasks/${id}`);
       fetchTasks();
     } catch (error) {
       setError('Failed to delete task');
