@@ -10,10 +10,15 @@ const userRoutes = require("./routes/users");
 
 const app = express();
 
-app.use(cors({
-  origin: "*",
-}));
-app.use(express.json());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://team-task-manager-5th4zqy1r-rishabh-sharmas-projects-58610397.vercel.app",
+    ],
+    credentials: true,
+  })
+);app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
