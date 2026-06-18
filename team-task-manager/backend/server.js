@@ -10,13 +10,15 @@ const userRoutes = require("./routes/users");
 
 const app = express();
 
+const cors = require("cors");
+
 app.use(
   cors({
     origin: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
-
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/users", userRoutes);
